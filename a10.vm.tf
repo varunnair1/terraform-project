@@ -2,7 +2,7 @@ resource "azurerm_linux_virtual_machine" "web_vm" {
   name                = "web-machine"
   location            = azurerm_resource_group.varun_rg.location
   resource_group_name = azurerm_resource_group.varun_rg.name
-  size                = var.vm_instance_size["testing"]
+  size                = var.vm_instance_size["development"]
   admin_username      = "azureuser"
   network_interface_ids = [
     azurerm_network_interface.webvm_nic.id,
